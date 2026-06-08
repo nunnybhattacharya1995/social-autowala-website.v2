@@ -1,0 +1,71 @@
+.grow { position: relative; background: var(--bg-2); }
+.inner { height: 100vh; overflow: hidden; display: flex; align-items: center; }
+.track { display: flex; gap: 0; height: 100%; align-items: center; will-change: transform; }
+.panel {
+  flex: 0 0 92vw;
+  max-width: 92vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 clamp(24px, 7vw, 120px);
+  position: relative;
+}
+.intro { flex: 0 0 70vw; max-width: 70vw; }
+.pno {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(80px, 16vw, 220px);
+  color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  top: 8%;
+  left: clamp(24px, 7vw, 120px);
+  letter-spacing: -0.04em;
+}
+:global([data-theme='light']) .pno { color: rgba(0, 0, 0, 0.05); }
+.stage {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(38px, 7vw, 96px);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  position: relative;
+}
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 30px 0; max-width: 560px; }
+.chips span {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 8px 14px;
+  border-radius: 30px;
+  color: rgba(247, 247, 242, 0.8);
+}
+:global([data-theme='light']) .chips span { border-color: rgba(0, 0, 0, 0.18); color: rgba(26, 26, 26, 0.8); }
+.q { font-size: clamp(20px, 3vw, 34px); font-weight: 500; color: var(--white); }
+.q em { color: var(--green); font-style: normal; }
+.head {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(40px, 8vw, 110px);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+.head small {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  color: var(--green);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 880px) {
+  .inner { height: auto; display: block; }
+  .track { flex-direction: column; height: auto; transform: none !important; gap: 0; }
+  .panel, .intro { flex: none; max-width: 100%; width: 100%; padding: 80px clamp(24px, 7vw, 40px); height: auto; }
+}

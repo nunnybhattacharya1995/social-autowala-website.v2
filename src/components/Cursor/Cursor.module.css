@@ -1,0 +1,52 @@
+.dot, .ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9000;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  will-change: transform;
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  background: var(--white);
+  transform: translate(-50%, -50%);
+}
+.ring {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(247, 247, 242, 0.6);
+  transform: translate(-50%, -50%);
+  transition: width 0.25s, height 0.25s, border-color 0.25s, background 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.label {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #000;
+  opacity: 0;
+  white-space: nowrap;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+:global(body.cursor-grow) .ring {
+  width: 90px;
+  height: 90px;
+  background: var(--green);
+  border-color: var(--green);
+  mix-blend-mode: normal;
+}
+:global(body.cursor-grow) .label { opacity: 1; }
+:global(body.cursor-link) .ring {
+  width: 64px;
+  height: 64px;
+  border-color: var(--green);
+}
+@media (pointer: coarse) {
+  .dot, .ring { display: none; }
+}

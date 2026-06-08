@@ -1,0 +1,49 @@
+.contact { text-align: center; }
+.belt {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 24px;
+}
+.head {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(48px, 12vw, 170px);
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+}
+.head :global(.g) { color: var(--green); }
+.start { margin-top: 50px; }
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 90px;
+  text-align: left;
+}
+.k {
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 10px;
+}
+.v { font-size: clamp(15px, 1.6vw, 19px); font-weight: 500; line-height: 1.5; max-width: 240px; }
+.socials { display: flex; gap: 16px; justify-content: center; margin-top: 60px; }
+.socials a {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: 0.4s;
+}
+:global([data-theme='light']) .socials a { border-color: rgba(0, 0, 0, 0.18); }
+.socials a:hover { background: var(--green); border-color: var(--green); color: #000; }
+.socials svg { width: 18px; height: 18px; }
