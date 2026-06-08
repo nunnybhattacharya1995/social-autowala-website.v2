@@ -70,3 +70,11 @@
 @media (max-width: 820px) {
   .wrap { grid-template-columns: 1fr; gap: 44px; }
 }
+@media (max-width: 600px) {
+  /* "Bhattacharya." is one long word — shrink so it never forces page overflow */
+  .h2 { font-size: clamp(30px, 9.5vw, 50px); }
+  .p { font-size: 15px; }
+  .vis { width: 100%; max-width: 340px; margin: 0 auto; border-radius: 22px; }
+  .mono { font-size: clamp(80px, 26vw, 120px); }
+  .contact { gap: 16px 22px; }
+}

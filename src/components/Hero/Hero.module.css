@@ -195,10 +195,23 @@
 }
 
 /* ── MOBILE ── */
+.inner { max-width: 100%; }
+
 @media (max-width: 768px) {
   .iconInsta, .iconFb, .iconMeta { width: 52px; height: 52px; }
   .iconInsta { top:-18%; left:-3%; }
   .iconFb    { top: 44%; left:-6%; }
   .iconMeta  { top: 52%; right:-6%; }
   .autoEl    { width: 110px; bottom: -6%; }
+}
+
+@media (max-width: 600px) {
+  .tag { font-size: 10px; letter-spacing: 0.26em; margin-bottom: 18px; }
+  .wordInner { font-size: clamp(42px, 14vw, 72px); }
+  .sub { font-size: clamp(19px, 6vw, 30px); margin-top: 22px; }
+  .act { font-size: 10px; letter-spacing: 0.2em; }
+  .ctas { margin-top: 30px; gap: 14px; width: 100%; }
+  .ctas > * { width: 100%; text-align: center; justify-content: center; }
+  .iconInsta, .iconFb, .iconMeta { width: 44px; height: 44px; }
+  .autoEl { width: 96px; }
 }
